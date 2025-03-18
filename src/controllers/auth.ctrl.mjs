@@ -1,4 +1,5 @@
 import jwtUtils from '../utils/jwt.utils.mjs';
+import axios from 'axios';
 
 export const jwtAuth = {
     sign: async(req, res) =>{
