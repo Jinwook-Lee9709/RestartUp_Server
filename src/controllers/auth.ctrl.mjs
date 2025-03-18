@@ -22,6 +22,7 @@ export const login ={
     },
     googleAuthenticate: async(req, res) =>{
         const { AuthCode } = req.body;
+        console.log('Request Body:', req.body);
         console.log(`code: ${AuthCode}`)
         let resp = null;
         try
