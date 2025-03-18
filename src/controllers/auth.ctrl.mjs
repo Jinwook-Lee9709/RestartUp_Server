@@ -28,7 +28,7 @@ export const login ={
         try
         {
             const resp = await axios.post(process.env.GOOGLE_TOKEN_URL, {
-                AuthCode,
+                code: AuthCode,
                 client_id: process.env.GOOGLE_CLIENT_ID,
                 client_secret: process.env.GOOGLE_CLIENT_SECRET,
                 redirect_uri: process.env.GOOGLE_REDIRECT_URI,
