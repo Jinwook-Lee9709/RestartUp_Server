@@ -22,12 +22,12 @@ export const login ={
     },
     googleAuthenticate: async(req, res) =>{
         const { AuthCode } = req.query;
-        console.log(`code: ${code}`)
+        console.log(`code: ${AuthCode}`)
         let resp = null;
         try
         {
             const resp = await axios.post(process.env.GOOGLE_TOKEN_URL, {
-                code,
+                AuthCode,
                 client_id: process.env.GOOGLE_CLIENT_ID,
                 client_secret: process.env.GOOGLE_CLIENT_SECRET,
                 redirect_uri: process.env.GOOGLE_REDIRECT_URI,
