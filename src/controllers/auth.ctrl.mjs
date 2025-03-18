@@ -34,12 +34,11 @@ export const login ={
                 redirect_uri: process.env.GOOGLE_REDIRECT_URI,
                 grant_type: 'authorization_code'
             });
-            console.log(resp);
         }catch (err)
         {
             console.log(`google Auth Request Failed with : ${err}`);
         }
-
+        console.log(resp);
         res.sendStatus(200);
     }
 }
